@@ -6,9 +6,9 @@ class Article < ActiveRecord::Base
 
   @@all = []
 
-  def initialize(params)
-    @title = params
-    @content = params
+  def initialize(title, content)
+    @title = title
+    @content = content
 
     @@all << self
   end
