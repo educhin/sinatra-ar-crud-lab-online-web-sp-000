@@ -8,25 +8,6 @@ class ApplicationController < Sinatra::Base
     set :public_folder, 'public'
     set :views, 'app/views'
   end
-  #
-  # get '/' do
-  # end
-  #
-  # get '/articles/new' do
-  #   erb :new
-  # end
-  #
-  # post '/articles' do
-  #   # @title = params[:title]
-  #   # @content = params[:content]
-  #   # Article.new(@title, @content)
-  #   #
-  #   # erb :show
-  #
-  #     @article = Article.new(title: params[:title], content: params[:content])
-  #     redirect to "/articles/#{ @article.id }"
-  # end
-
 
   get '/' do
     redirect to "/articles"
@@ -61,6 +42,26 @@ class ApplicationController < Sinatra::Base
     @article = Article.find(params[:id])
     erb :edit
   end
+  #
+  # get '/' do
+  # end
+  #
+  # get '/articles/new' do
+  #   erb :new
+  # end
+  #
+  # post '/articles' do
+  #   # @title = params[:title]
+  #   # @content = params[:content]
+  #   # Article.new(@title, @content)
+  #   #
+  #   # erb :show
+  #
+  #     @article = Article.new(title: params[:title], content: params[:content])
+  #     redirect to "/articles/#{ @article.id }"
+  # end
+
+
   #
   # # update
   # patch "/articles/:id" do
